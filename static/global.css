@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Space+Mono:ital@0;1&display=swap');
+
+:root {
+	--font-heading: 'Space Mono', monospace;
+	--font-text: 'Comfortaa', monospace;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,5 +12,43 @@
 }
 
 body {
-	margin: 0 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1rem;
+	background-color: midnightblue;
+	max-width: 1000px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-heading);
+	color: palegreen;
+}
+
+p {
+	font-family: var(--font-text);
+}
+
+table {
+	font-family: var(--font-text);
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	font-family: var(--font-text);
+	color: palegoldenrod;
+	font-size: 2rem;
+}
+
+a:hover {
+	color: palegreen;
+	text-decoration: underline;
 }
