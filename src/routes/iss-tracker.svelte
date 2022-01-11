@@ -13,10 +13,20 @@
 
 <script>
 	export let tracker;
+	const convert = () => {
+		let kmh = tracker.velocity * 2.2;
+		let km = tracker.altitude * 2.2;
+	};
 </script>
 
 <slot>
-	<h1>{tracker.name.toUpperCase()}</h1>
+	<h1>{tracker.name.toUpperCase()}'s Current Location</h1>
+
+	<div class="unit">
+		<h3>Miles</h3>
+		<h2>|</h2>
+		<h3 on:click={convert}>Kilometers</h3>
+	</div>
 
 	<table>
 		<th colspan="2">{tracker.name.toUpperCase()}</th>
@@ -56,6 +66,12 @@
 </slot>
 
 <style>
+	.unit {
+		display: flex;
+		align-items: center;
+		padding: 1rem 0;
+	}
+
 	table {
 		border: 2px solid black;
 		font-size: large;
